@@ -61,6 +61,14 @@ search in globe and print
       exit 0
       
 * Syntax
+
+   * (a)
+   
+   * (b)
+   
+   * (c)
+   
+   * (d)
       
 * Execution Scripts
 
