@@ -75,7 +75,7 @@ search in globe and print
    
            command > file redirects a command’s output to a file (overwriting any existing content).
 
-         command >> file appends a command’s output to a file.
+           command >> file appends a command’s output to a file.
 
    
    * (d)
