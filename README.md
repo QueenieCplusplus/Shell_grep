@@ -25,9 +25,10 @@ search in globe and print
 
        echo "s/$pattern/${boldon}$pattern${boldoff}/g" >$sedscript
 
-       for lineon in $(grep -n "$pattern" $1 | cut -d: -f1) #(a) -f1 
+       for lineon in $(grep -n "$pattern" $1 | cut -d: -f1) #(a) 
        do
            if [$context -gt 0]; then
+              prev = "$(( $lineon - $context))"
 
 
          if [ $prev -lt 1]; then
@@ -37,14 +38,14 @@ search in globe and print
          next = "(( $lineon + $context ))"
 
          if [ $matches -gt 0]; then
-           echo "${prev}i\\" >> $sedscript #(b) i\\
+           echo "${prev}i\\" >> $sedscript #(b) 
 
                fi
           echo "${prev,${next}p}" >> $sedscript
 
 
            else
-             echo "${lineon}p" >> $sedscript #(c) >>, p
+             echo "${lineon}p" >> $sedscript #(c) 
 
 
            fi
@@ -52,7 +53,7 @@ search in globe and print
        done
 
        if [$matches -gt 0]; then
-          sed -n -f $sedscript $1 | uniq | more #(d) -f
+          sed -n -f $sedscript $1 | uniq | more #(d)
        fi
 
       }
@@ -62,7 +63,11 @@ search in globe and print
       
 * Syntax
 
-   * (a)
+   * (a) grep -n
+   
+      取得所有符合模板文字的行號。
+   
+      
    
    * (b)
    
