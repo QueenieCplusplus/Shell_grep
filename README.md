@@ -27,7 +27,7 @@ search in globe and print
 
        for lineon in $(grep -n "$pattern" $1 | cut -d: -f1) #(a) 
        do
-           if [$context -gt 0]; then
+           if [ $context -gt 0 ]; then
               prev = "$(( $lineon - $context))"
 
 
