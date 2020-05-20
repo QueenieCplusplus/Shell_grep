@@ -72,6 +72,8 @@ search in globe and print
       
 * Execution Scripts
 
+此腳本可接受輸入串流或是檔案，可將串流暫存至暫存檔案，方才處理暫存檔案，抑或是命令列指定檔案（可指定一個或是多個檔案）。
+
         $ cgrep -c 1 tea tea.txt
 
 
