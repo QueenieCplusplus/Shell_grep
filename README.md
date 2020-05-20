@@ -77,7 +77,7 @@ search in globe and print
       
 * Execution Scripts
 
--c <line_number>
+        -c <line_number>
 
 指定要顯示前後文的行數。
 
