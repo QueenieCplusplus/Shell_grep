@@ -1,6 +1,8 @@
 # Shell_grep
 search in globe and print
 
+* Script
+
     #!/bin/bash
     # cgrep-- 顯示前後文並且符合模板的全域搜索和列印指令
 
@@ -53,7 +55,11 @@ search in globe and print
           sed -n -f $sedscript $1 | uniq | more #(d) -f
        fi
 
-     }
+      }
 
 
-    exit 0
+      exit 0
+      
+* Syntax
+      
+* Execution Scripts
