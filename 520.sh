@@ -47,7 +47,7 @@
    done
 
    if [$matches -gt 0]; then
-      sed -n -f $sedscript $1 | uniq | more #questionByVivy -f
+      sed -n -f $sedscript $1 | uniq | more #(d) -f
    fi
  
  }
