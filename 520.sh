@@ -23,19 +23,21 @@
    for lineon in $(grep -n "$pattern" $1 | cut -d: -f1) #(a) -f1 
    do
        if [$context -gt 0]; then
+       
+          prev = "$(( $lineon - $context))"
 
 
-	   if [ $prev -lt 1]; then
-	      prev="1"
+		   if [ $prev -lt 1]; then
+		      prev="1"
 
-           fi
-	   next = "(( $lineon + $context ))"
+		   fi
+		   next = "(( $lineon + $context ))"
 
-	   if [ $matches -gt 0]; then
-		   echo "${prev}i\\" >> $sedscript #(b) i\\
+		   if [ $matches -gt 0]; then
+			   echo "${prev}i\\" >> $sedscript #(b) i\\
 
-           fi
-	    echo "${prev,${next}p}" >> $sedscript
+		   fi
+		    echo "${prev,${next}p}" >> $sedscript
 
 
        else
