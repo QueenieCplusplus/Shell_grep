@@ -31,17 +31,17 @@ search in globe and print
               prev = "$(( $lineon - $context))"
 
 
-         if [ $prev -lt 1]; then
-            prev="1"
+                 if [ $prev -lt 1]; then
+                    prev="1"
 
-               fi
-         next = "(( $lineon + $context ))"
+                 fi
+                   next = "(( $lineon + $context ))"
 
-         if [ $matches -gt 0]; then
-           echo "${prev}i\\" >> $sedscript #(b) 
+                 if [ $matches -gt 0]; then
+                 echo "${prev}i\\" >> $sedscript #(b) 
 
-               fi
-          echo "${prev,${next}p}" >> $sedscript
+                 fi
+                  echo "${prev,${next}p}" >> $sedscript
 
 
            else
