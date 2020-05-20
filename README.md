@@ -71,6 +71,12 @@ search in globe and print
    
    * (b)
    
+   
+         ${}i
+         
+         ${}p
+   
+   
    * (c)
    
            command > file redirects a command’s output to a file (overwriting any existing content).
