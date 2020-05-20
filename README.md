@@ -73,7 +73,14 @@ search in globe and print
    
    * (c)
    
+           command > file redirects a command’s output to a file (overwriting any existing content).
+
+         command >> file appends a command’s output to a file.
+
+   
    * (d)
+
+            first | second is a pipeline: the output of the first command is used as the input to the second.
       
 * Execution Scripts
 
