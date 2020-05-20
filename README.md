@@ -63,3 +63,7 @@ search in globe and print
 * Syntax
       
 * Execution Scripts
+
+$ cgrep -c 1 tea tea.txt
+
+
