@@ -64,6 +64,6 @@ search in globe and print
       
 * Execution Scripts
 
-$ cgrep -c 1 tea tea.txt
+        $ cgrep -c 1 tea tea.txt
 
 
