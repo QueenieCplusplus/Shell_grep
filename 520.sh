@@ -1,17 +1,17 @@
 #!/bin/bash
 # cgrep-- 顯示前後文並且符合模板的全域搜索和列印指令
 
- context = 0
+ context=0
 
- esc = "^["
+ esc="^["
 
- boldon = "${esc}[1m"
+ boldon="${esc}[1m"
 
- boldoff = "${esc}[22m"
+ boldoff="${esc}[22m"
 
- tempout = '/tmp/cgrep.$$'
+ tempout='/tmp/cgrep.$$'
 
- sedscript = '/tmp/cgrep.sed.$$'
+ sedscript='/tmp/cgrep.sed.$$'
 
  function MatchOrNot
  {
@@ -24,14 +24,14 @@
    do
        if [ $context -gt 0 ]; then
        
-          prev = "$(( $lineon - $context))"
+          prev="$(( $lineon - $context))"
 
 
 		   if [ $prev -lt 1]; then
 		      prev="1"
 
 		   fi
-		   next = "(( $lineon + $context ))"
+		   next="(( $lineon + $context ))"
 
 		   if [ $matches -gt 0]; then
 			   echo "${prev}i\\" >> $sedscript #(b) i\\
@@ -45,7 +45,7 @@
 
 
        fi
-        matches = "$(( matches +1 ))"
+        matches="$(( matches +1 ))"
    done
 
    if [$matches -gt 0]; then
