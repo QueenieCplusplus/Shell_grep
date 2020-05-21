@@ -35,7 +35,7 @@ search in globe and print
                         prev="1"
 
                      fi
-                       next = "(( $lineon + $context ))"
+                       next="(( $lineon + $context ))"
 
                      if [ $matches -gt 0]; then
                      echo "${prev}i\\" >> $sedscript #(b) 
