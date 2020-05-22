@@ -81,6 +81,8 @@ search in globe and print
    
    * (c)
    
+     https://github.com/QueenieCplusplus/Shell_echo/blob/master/README.md#--
+   
            command > file redirects a command’s output to a file (overwriting any existing content).
 
            command >> file appends a command’s output to a file.
